@@ -1,5 +1,5 @@
 #
-# Copyright (C) 2020 Corvus Project
+# Copyright (C) 2019 The Xtended Project
 #
 # Licensed under the Apache License, Version 2.0 (the "License");
 # you may not use this file except in compliance with the License.
@@ -16,26 +16,23 @@
 
 $(call inherit-product, device/xiaomi/santoni/full_santoni.mk)
 
-# Inherit some common Corvus stuff.
-$(call inherit-product, vendor/komodo/config/common_full_phone.mk)
+# Inherit some common Xtended stuff.
+$(call inherit-product, vendor/xtended/config/common_full_phone.mk)
 
 PRODUCT_DEVICE := santoni
 PRODUCT_BRAND := Xiaomi
-PRODUCT_MODEL := Redmi 4X
-PRODUCT_NAME := komodo_santoni
+PRODUCT_MODEL := Redmi 4
+PRODUCT_NAME := xtended_santoni
 BOARD_VENDOR := Xiaomi
 PRODUCT_MANUFACTURER := Xiaomi
 
-# Gapps
-CURRENT_BUILD_TYPE := nogapps
-
-# OFFICIAL TAG
-KOMODO_OFFICIAL=true
-KOMODO_VARIANT = RELEASE
+#Maintainer
+PRODUCT_PROPERTY_OVERRIDES += \
+    ro.xtended.maintainer=ZHANtech
 
 # Boot animation
 TARGET_BOOT_ANIMATION_RES := 720
-
+	
 PRODUCT_GMS_CLIENTID_BASE := android-xiaomi
 
 PRODUCT_BUILD_PROP_OVERRIDES += \
